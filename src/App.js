@@ -170,7 +170,7 @@ function App() {
   return (
     <>
       <ToastContainer />
-      <NavBar />
+      <NavBar setPageTitle={setPageTitle} />
       <Container fluid style={{ backgroundColor: "#f5f5f5", width: "100%" }}>
         <Row>
           <Col xs={12}>

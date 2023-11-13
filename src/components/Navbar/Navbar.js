@@ -1,13 +1,17 @@
 import React from "react";
 import { Navbar, Container } from "react-bootstrap";
 
-const NavBar = () => {
+const NavBar = ({ setPageTitle }) => {
+  const handleChanges = (e) => {
+    e.preventDefault();
+    setPageTitle("Albums");
+  };
   return (
     <Navbar
       style={{ width: "100%", backgroundColor: "#0b6ba7", height: "100px" }}
     >
       <Container fluid>
-        <div>
+        <div onClick={handleChanges} style={{ cursor: "pointer" }}>
           <svg
             style={{ marginLeft: "10px" }}
             xmlns="http://www.w3.org/2000/svg"
